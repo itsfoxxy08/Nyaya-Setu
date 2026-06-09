@@ -1,9 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Sparkles, BookOpen, FileText, ShieldCheck, Activity, BadgeCheck,
   Search, Briefcase, Brain, AlertTriangle, Archive, BarChart3, Map,
   Lightbulb, Languages, ScrollText, EyeOff, Gamepad2, MessagesSquare,
-  ArrowRight, Scale, Gavel, Building2, UserRound,
+  ArrowRight, Scale, Gavel, Building2, UserRound, Eye, Lock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -68,49 +72,216 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_oklch(0.1_0.04_260/0.6)_70%)]" />
 
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
-        <div className="max-w-3xl animate-fade-in-up opacity-0">
-          <Badge className="border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60">
-            <Sparkles className="mr-1.5 h-3 w-3 animate-pulse" /> A public-interest initiative
-          </Badge>
-          <h1 className="mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight">
-            Justice,{" "}
-            <span className="italic text-gold">bridged.</span>
-            <br />
-            For every citizen.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-parchment/75">
-            Nyaya Setu unites citizens, lawyers, law enforcement and the
-            judiciary on a single intelligent platform — so understanding your
-            rights, filing a complaint, or tracking a case is no longer a
-            privilege, but a right.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-12 items-center">
+          {/* Left Column: Hero Text */}
+          <div className="lg:col-span-7 animate-fade-in-up opacity-0 flex flex-col justify-center">
+            <Badge className="w-fit border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60">
+              <Sparkles className="mr-1.5 h-3 w-3 animate-pulse" /> A public-interest initiative
+            </Badge>
+            <h1 className="mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight">
+              Justice,{" "}
+              <span className="italic text-gold">bridged.</span>
+              <br />
+              For every citizen.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-parchment/75">
+              Nyaya Setu unites citizens, lawyers, law enforcement and the
+              judiciary on a single intelligent platform — so understanding your
+              rights, filing a complaint, or tracking a case is no longer a
+              privilege, but a right.
+            </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Button asChild size="lg" className="bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
-              <Link to="/auth" search={{ mode: "register" }} className="flex items-center">
-                Begin your journey <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
-              <a href="#citizens">Explore the platform</a>
-            </Button>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <Button asChild size="lg" className="bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+                <Link to="/auth" search={{ mode: "register" }} className="flex items-center">
+                  Begin your journey <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+                <a href="#citizens">Explore the platform</a>
+              </Button>
+            </div>
+
+            <dl className="mt-16 grid grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200">
+              {[
+                { k: "22+", v: "Indian languages" },
+                { k: "1 ecosystem", v: "for 4 stakeholders" },
+                { k: "End-to-end", v: "from rights to ruling" },
+              ].map((s) => (
+                <div key={s.v} className="transition-premium hover:scale-[1.05]">
+                  <dt className="font-display text-2xl md:text-3xl text-gold">{s.k}</dt>
+                  <dd className="mt-1 text-[10px] md:text-xs uppercase tracking-[0.14em] text-parchment/60">{s.v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200">
-            {[
-              { k: "22+", v: "Indian languages" },
-              { k: "1 ecosystem", v: "for 4 stakeholders" },
-              { k: "End-to-end", v: "from rights to ruling" },
-            ].map((s) => (
-              <div key={s.v} className="transition-premium hover:scale-[1.05]">
-                <dt className="font-display text-3xl text-gold">{s.k}</dt>
-                <dd className="mt-1 text-xs uppercase tracking-[0.14em] text-parchment/60">{s.v}</dd>
-              </div>
-            ))}
-          </dl>
+          {/* Right Column: Interactive Login Panel */}
+          <div className="lg:col-span-5 animate-fade-in-up opacity-0 animation-delay-150">
+            <HeroLoginCard />
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroLoginCard() {
+  const [role, setRole] = useState<"citizen" | "lawyer" | "government">("citizen");
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const roles = [
+    { id: "citizen", label: "Citizen", icon: UserRound },
+    { id: "lawyer", label: "Lawyer", icon: Gavel },
+    { id: "government", label: "Government", icon: Building2 },
+  ] as const;
+
+  const getRoleConfig = () => {
+    switch (role) {
+      case "citizen":
+        return {
+          idLabel: "Nyaya ID / Mobile Number",
+          idPlaceholder: "12-3456-7890-1234 or +91...",
+          footerPrompt: "Don't have a Nyaya ID?",
+          footerAction: "Create New Nyaya ID",
+          footerLink: "/auth?mode=register",
+        };
+      case "lawyer":
+        return {
+          idLabel: "Bar Council Registration Number",
+          idPlaceholder: "e.g. MAH/9876/2025",
+          footerPrompt: "Advocate not registered?",
+          footerAction: "Apply for Verification",
+          footerLink: "/auth?mode=register",
+        };
+      case "government":
+        return {
+          idLabel: "Official Email / Government ID",
+          idPlaceholder: "e.g. officer@judiciary.gov.in",
+          footerPrompt: "Need official portal access?",
+          footerAction: "Request Credentials",
+          footerLink: "/auth?mode=register",
+        };
+    }
+  };
+
+  const config = getRoleConfig();
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      toast.success(`Securely logged in as ${role.toUpperCase()}. Welcome to Nyaya Setu.`);
+    }, 1000);
+  };
+
+  return (
+    <Card className="w-full border border-parchment/20 bg-ink/65 backdrop-blur-xl p-7 shadow-elegant text-parchment">
+      <div className="mb-6">
+        <div className="grid grid-cols-3 gap-1 rounded-lg bg-ink/50 p-1 border border-parchment/10">
+          {roles.map((r) => {
+            const active = role === r.id;
+            const Icon = r.icon;
+            return (
+              <button
+                key={r.id}
+                type="button"
+                onClick={() => setRole(r.id)}
+                className={`flex flex-col items-center justify-center rounded-md py-2 text-xs font-medium transition-premium cursor-pointer ${
+                  active
+                    ? "bg-parchment text-ink shadow-seal font-semibold scale-100"
+                    : "text-parchment/60 hover:text-parchment hover:bg-parchment/5"
+                }`}
+              >
+                <Icon className="mb-1 h-4 w-4" strokeWidth={2} />
+                {r.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <form onSubmit={handleLogin} className="space-y-4">
+        <div className="space-y-1.5">
+          <Label className="text-xs uppercase tracking-[0.14em] text-parchment/70">{config.idLabel}</Label>
+          <div className="relative">
+            <UserRound className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-parchment/40" strokeWidth={1.8} />
+            <Input
+              type="text"
+              required
+              placeholder={config.idPlaceholder}
+              className="pl-9 h-11 bg-ink/30 border-parchment/15 text-parchment placeholder:text-parchment/30 focus-visible:ring-gold focus-visible:border-gold"
+            />
+          </div>
+        </div>
+
+        <div className="space-y-1.5">
+          <Label className="text-xs uppercase tracking-[0.14em] text-parchment/70">Password / OTP</Label>
+          <div className="relative">
+            <Lock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-parchment/40" strokeWidth={1.8} />
+            <Input
+              type={showPassword ? "text" : "password"}
+              required
+              placeholder="••••••••"
+              className="pl-9 pr-9 h-11 bg-ink/30 border-parchment/15 text-parchment placeholder:text-parchment/30 focus-visible:ring-gold focus-visible:border-gold"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-parchment/40 hover:text-parchment transition cursor-pointer"
+            >
+              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between text-xs py-1">
+          <label className="flex items-center gap-2 text-parchment/65 hover:text-parchment transition cursor-pointer select-none">
+            <input
+              type="checkbox"
+              className="h-3.5 w-3.5 rounded border-parchment/20 bg-ink/40 checked:bg-gold checked:border-gold text-ink"
+            />
+            Remember me
+          </label>
+          <a href="/auth?mode=login" className="text-gold hover:underline transition">
+            Forgot password?
+          </a>
+        </div>
+
+        <Button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-gold-gradient text-ink font-semibold py-3 rounded-lg shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
+        >
+          {loading ? (
+            "Authenticating..."
+          ) : (
+            <>
+              Secure Login <ArrowRight className="h-4 w-4" />
+            </>
+          )}
+        </Button>
+      </form>
+
+      <div className="relative my-6">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-parchment/10" />
+        </div>
+        <div className="relative flex justify-center text-xs uppercase">
+          <span className="bg-[#121927] px-2.5 text-parchment/45 tracking-wider">{config.footerPrompt}</span>
+        </div>
+      </div>
+
+      <Button
+        asChild
+        variant="outline"
+        className="w-full border border-gold/30 bg-transparent text-gold font-medium py-2.5 rounded-lg transition-premium hover:bg-gold/10 hover:border-gold/50 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+      >
+        <Link to={config.footerLink}>{config.footerAction}</Link>
+      </Button>
+    </Card>
   );
 }
 

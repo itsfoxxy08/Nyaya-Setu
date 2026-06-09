@@ -17,7 +17,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-CfsHV3j8.css";
+const appCss = "/assets/styles-BiJhcOd4.css";
 const Toaster = ({ ...props }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     Toaster$1,
@@ -123,7 +123,7 @@ function RootComponent() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Toaster, { richColors: true, position: "top-center" })
   ] });
 }
-const $$splitComponentImporter$1 = () => import("./auth-CDg65iqC.mjs");
+const $$splitComponentImporter$1 = () => import("./auth-B5ON_Pf7.mjs");
 const searchSchema = objectType({
   mode: enumType(["login", "register"]).catch("login")
 });
@@ -139,7 +139,7 @@ const Route$1 = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-Cc2x-RDe.mjs");
+const $$splitComponentImporter = () => import("./index-Dr4qhh9C.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

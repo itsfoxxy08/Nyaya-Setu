@@ -1,8 +1,9 @@
-import { j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { B as Button, C as Card, c as cn } from "./card-C9dwBrwh.mjs";
+import { t as toast } from "../_libs/sonner.mjs";
+import { B as Button, C as Card, c as cn, L as Label, I as Input } from "./card-BvOm9BoC.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
-import { S as Scale, d as Sparkles, A as ArrowRight, U as UserRound, G as Gavel, b as ShieldCheck, B as Building2, e as BookOpen, F as FileText, f as Archive, g as Activity, h as BadgeCheck, i as Search, j as Briefcase, k as Brain, l as ScrollText, m as Languages, T as TriangleAlert, n as MessagesSquare, C as ChartColumn, o as Map, p as Lightbulb, E as EyeOff, q as Gamepad2 } from "../_libs/lucide-react.mjs";
+import { S as Scale, d as Sparkles, A as ArrowRight, U as UserRound, G as Gavel, b as ShieldCheck, B as Building2, e as BookOpen, F as FileText, f as Archive, g as Activity, h as BadgeCheck, i as Search, j as Briefcase, k as Brain, l as ScrollText, m as Languages, T as TriangleAlert, n as MessagesSquare, C as ChartColumn, o as Map, p as Lightbulb, E as EyeOff, q as Gamepad2, L as Lock, a as Eye } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -18,6 +19,8 @@ import "stream";
 import "../_libs/isbot.mjs";
 import "../_libs/radix-ui__react-slot.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
+import "../_libs/radix-ui__react-label.mjs";
+import "../_libs/radix-ui__react-primitive.mjs";
 import "../_libs/clsx.mjs";
 import "../_libs/tailwind-merge.mjs";
 const badgeVariants = cva(
@@ -125,42 +128,143 @@ function Hero() {
     } }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-ink-gradient opacity-90" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_oklch(0.1_0.04_260/0.6)_70%)]" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl animate-fade-in-up opacity-0", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { className: "border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "mr-1.5 h-3 w-3 animate-pulse" }),
-        " A public-interest initiative"
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-12 lg:grid-cols-12 items-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7 animate-fade-in-up opacity-0 flex flex-col justify-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { className: "w-fit border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "mr-1.5 h-3 w-3 animate-pulse" }),
+          " A public-interest initiative"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight", children: [
+          "Justice,",
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-gold", children: "bridged." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+          "For every citizen."
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-2xl text-lg leading-relaxed text-parchment/75", children: "Nyaya Setu unites citizens, lawyers, law enforcement and the judiciary on a single intelligent platform — so understanding your rights, filing a complaint, or tracking a case is no longer a privilege, but a right." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex flex-wrap items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/auth", search: {
+            mode: "register"
+          }, className: "flex items-center", children: [
+            "Begin your journey ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" })
+          ] }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", variant: "outline", className: "border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#citizens", children: "Explore the platform" }) })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("dl", { className: "mt-16 grid grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200", children: [{
+          k: "22+",
+          v: "Indian languages"
+        }, {
+          k: "1 ecosystem",
+          v: "for 4 stakeholders"
+        }, {
+          k: "End-to-end",
+          v: "from rights to ruling"
+        }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "transition-premium hover:scale-[1.05]", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "font-display text-2xl md:text-3xl text-gold", children: s.k }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-[10px] md:text-xs uppercase tracking-[0.14em] text-parchment/60", children: s.v })
+        ] }, s.v)) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight", children: [
-        "Justice,",
-        " ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-gold", children: "bridged." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-        "For every citizen."
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-2xl text-lg leading-relaxed text-parchment/75", children: "Nyaya Setu unites citizens, lawyers, law enforcement and the judiciary on a single intelligent platform — so understanding your rights, filing a complaint, or tracking a case is no longer a privilege, but a right." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex flex-wrap items-center gap-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/auth", search: {
-          mode: "register"
-        }, className: "flex items-center", children: [
-          "Begin your journey ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", variant: "outline", className: "border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#citizens", children: "Explore the platform" }) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("dl", { className: "mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200", children: [{
-        k: "22+",
-        v: "Indian languages"
-      }, {
-        k: "1 ecosystem",
-        v: "for 4 stakeholders"
-      }, {
-        k: "End-to-end",
-        v: "from rights to ruling"
-      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "transition-premium hover:scale-[1.05]", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "font-display text-3xl text-gold", children: s.k }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-xs uppercase tracking-[0.14em] text-parchment/60", children: s.v })
-      ] }, s.v)) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5 animate-fade-in-up opacity-0 animation-delay-150", children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroLoginCard, {}) })
     ] }) })
+  ] });
+}
+function HeroLoginCard() {
+  const [role, setRole] = reactExports.useState("citizen");
+  const [showPassword, setShowPassword] = reactExports.useState(false);
+  const [loading, setLoading] = reactExports.useState(false);
+  const roles = [{
+    id: "citizen",
+    label: "Citizen",
+    icon: UserRound
+  }, {
+    id: "lawyer",
+    label: "Lawyer",
+    icon: Gavel
+  }, {
+    id: "government",
+    label: "Government",
+    icon: Building2
+  }];
+  const getRoleConfig = () => {
+    switch (role) {
+      case "citizen":
+        return {
+          idLabel: "Nyaya ID / Mobile Number",
+          idPlaceholder: "12-3456-7890-1234 or +91...",
+          footerPrompt: "Don't have a Nyaya ID?",
+          footerAction: "Create New Nyaya ID",
+          footerLink: "/auth?mode=register"
+        };
+      case "lawyer":
+        return {
+          idLabel: "Bar Council Registration Number",
+          idPlaceholder: "e.g. MAH/9876/2025",
+          footerPrompt: "Advocate not registered?",
+          footerAction: "Apply for Verification",
+          footerLink: "/auth?mode=register"
+        };
+      case "government":
+        return {
+          idLabel: "Official Email / Government ID",
+          idPlaceholder: "e.g. officer@judiciary.gov.in",
+          footerPrompt: "Need official portal access?",
+          footerAction: "Request Credentials",
+          footerLink: "/auth?mode=register"
+        };
+    }
+  };
+  const config = getRoleConfig();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      toast.success(`Securely logged in as ${role.toUpperCase()}. Welcome to Nyaya Setu.`);
+    }, 1e3);
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "w-full border border-parchment/20 bg-ink/65 backdrop-blur-xl p-7 shadow-elegant text-parchment", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-3 gap-1 rounded-lg bg-ink/50 p-1 border border-parchment/10", children: roles.map((r) => {
+      const active = role === r.id;
+      const Icon = r.icon;
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setRole(r.id), className: `flex flex-col items-center justify-center rounded-md py-2 text-xs font-medium transition-premium cursor-pointer ${active ? "bg-parchment text-ink shadow-seal font-semibold scale-100" : "text-parchment/60 hover:text-parchment hover:bg-parchment/5"}`, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "mb-1 h-4 w-4", strokeWidth: 2 }),
+        r.label
+      ] }, r.id);
+    }) }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleLogin, className: "space-y-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { className: "text-xs uppercase tracking-[0.14em] text-parchment/70", children: config.idLabel }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(UserRound, { className: "pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-parchment/40", strokeWidth: 1.8 }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { type: "text", required: true, placeholder: config.idPlaceholder, className: "pl-9 h-11 bg-ink/30 border-parchment/15 text-parchment placeholder:text-parchment/30 focus-visible:ring-gold focus-visible:border-gold" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { className: "text-xs uppercase tracking-[0.14em] text-parchment/70", children: "Password / OTP" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Lock, { className: "pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-parchment/40", strokeWidth: 1.8 }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { type: showPassword ? "text" : "password", required: true, placeholder: "••••••••", className: "pl-9 pr-9 h-11 bg-ink/30 border-parchment/15 text-parchment placeholder:text-parchment/30 focus-visible:ring-gold focus-visible:border-gold" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setShowPassword(!showPassword), className: "absolute right-3 top-1/2 -translate-y-1/2 text-parchment/40 hover:text-parchment transition cursor-pointer", children: showPassword ? /* @__PURE__ */ jsxRuntimeExports.jsx(EyeOff, { className: "h-4 w-4" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { className: "h-4 w-4" }) })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-xs py-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "flex items-center gap-2 text-parchment/65 hover:text-parchment transition cursor-pointer select-none", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "checkbox", className: "h-3.5 w-3.5 rounded border-parchment/20 bg-ink/40 checked:bg-gold checked:border-gold text-ink" }),
+          "Remember me"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/auth?mode=login", className: "text-gold hover:underline transition", children: "Forgot password?" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", disabled: loading, className: "w-full bg-gold-gradient text-ink font-semibold py-3 rounded-lg shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2", children: loading ? "Authenticating..." : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        "Secure Login ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
+      ] }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative my-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center", "aria-hidden": "true", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full border-t border-parchment/10" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative flex justify-center text-xs uppercase", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-[#121927] px-2.5 text-parchment/45 tracking-wider", children: config.footerPrompt }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "outline", className: "w-full border border-gold/30 bg-transparent text-gold font-medium py-2.5 rounded-lg transition-premium hover:bg-gold/10 hover:border-gold/50 hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: config.footerLink, children: config.footerAction }) })
   ] });
 }
 function TrustStrip() {
