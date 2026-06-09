@@ -6,19 +6,19 @@ import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
 import path from "path";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart({
       server: { entry: "server" },
     }),
-    nitro(),
+    command === "build" ? nitro() : null,
     react(),
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(process.cwd(), "./src"),
     },
   },
-});
+}));
