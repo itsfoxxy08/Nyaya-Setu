@@ -1,0 +1,470 @@
+import { j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { L as Link } from "../_libs/tanstack__react-router.mjs";
+import { B as Button, C as Card, c as cn } from "./card-C9dwBrwh.mjs";
+import { c as cva } from "../_libs/class-variance-authority.mjs";
+import { S as Scale, d as Sparkles, A as ArrowRight, U as UserRound, G as Gavel, b as ShieldCheck, B as Building2, e as BookOpen, F as FileText, f as Archive, g as Activity, h as BadgeCheck, i as Search, j as Briefcase, k as Brain, l as ScrollText, m as Languages, T as TriangleAlert, n as MessagesSquare, C as ChartColumn, o as Map, p as Lightbulb, E as EyeOff, q as Gamepad2 } from "../_libs/lucide-react.mjs";
+import "../_libs/tanstack__router-core.mjs";
+import "../_libs/tanstack__history.mjs";
+import "../_libs/cookie-es.mjs";
+import "../_libs/seroval.mjs";
+import "../_libs/seroval-plugins.mjs";
+import "node:stream/web";
+import "node:stream";
+import "../_libs/react-dom.mjs";
+import "util";
+import "crypto";
+import "async_hooks";
+import "stream";
+import "../_libs/isbot.mjs";
+import "../_libs/radix-ui__react-slot.mjs";
+import "../_libs/radix-ui__react-compose-refs.mjs";
+import "../_libs/clsx.mjs";
+import "../_libs/tailwind-merge.mjs";
+const badgeVariants = cva(
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
+        outline: "text-foreground"
+      }
+    },
+    defaultVariants: {
+      variant: "default"
+    }
+  }
+);
+function Badge({ className, variant, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: cn(badgeVariants({ variant }), className), ...props });
+}
+function SiteHeader() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto flex h-16 max-w-7xl items-center justify-between px-6", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center gap-2.5", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid h-9 w-9 place-items-center rounded-md bg-ink-gradient text-gold shadow-seal", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Scale, { className: "h-4.5 w-4.5", strokeWidth: 1.8 }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-lg font-semibold text-foreground", children: "Nyaya Setu" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-[0.18em] text-muted-foreground", children: "Justice · Bridged" })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden items-center gap-8 text-sm text-muted-foreground md:flex", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#citizens", className: "hover:text-foreground transition", children: "Citizens" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#lawyers", className: "hover:text-foreground transition", children: "Lawyers" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#authorities", className: "hover:text-foreground transition", children: "Authorities" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#ai", className: "hover:text-foreground transition", children: "AI Tools" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#rights", className: "hover:text-foreground transition", children: "Rights" })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, variant: "ghost", size: "sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", search: { mode: "login" }, children: "Sign in" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "sm", className: "bg-ink-gradient text-primary-foreground hover:opacity-95", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", search: { mode: "register" }, children: "Get started" }) })
+    ] })
+  ] }) });
+}
+function SiteFooter() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "border-t border-border/60 bg-background", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "md:col-span-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid h-9 w-9 place-items-center rounded-md bg-ink-gradient text-gold", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Scale, { className: "h-4.5 w-4.5", strokeWidth: 1.8 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-lg font-semibold", children: "Nyaya Setu" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-sm text-sm text-muted-foreground", children: "A unified digital justice ecosystem connecting citizens, lawyers, law enforcement and the judiciary across India." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs uppercase tracking-[0.18em] text-muted-foreground", children: "Platform" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-2 text-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "AI Legal Assistant" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Rights Awareness" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Complaint Builder" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Evidence Vault" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs uppercase tracking-[0.18em] text-muted-foreground", children: "Institution" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-2 text-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "About" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Government Analytics" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Privacy & Security" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Contact" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-border/60 py-5 text-center text-xs text-muted-foreground", children: [
+      "© ",
+      (/* @__PURE__ */ new Date()).getFullYear(),
+      " Nyaya Setu · Built in the public interest."
+    ] })
+  ] });
+}
+const heroImg = "/assets/hero-justice-Cbm-nl7j.jpg";
+function LandingPage() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SiteHeader, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(TrustStrip, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Problem, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Stakeholders, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(CitizenModule, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(LawyerModule, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(PoliceModule, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(GovAnalytics, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(AIFeatures, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Innovations, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Impact, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(CTA, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SiteFooter, {})
+  ] });
+}
+function Hero() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 opacity-90", style: {
+      backgroundImage: `url(${heroImg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    } }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-ink-gradient opacity-90" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_oklch(0.1_0.04_260/0.6)_70%)]" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl animate-fade-in-up opacity-0", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { className: "border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "mr-1.5 h-3 w-3 animate-pulse" }),
+        " A public-interest initiative"
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight", children: [
+        "Justice,",
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-gold", children: "bridged." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+        "For every citizen."
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-2xl text-lg leading-relaxed text-parchment/75", children: "Nyaya Setu unites citizens, lawyers, law enforcement and the judiciary on a single intelligent platform — so understanding your rights, filing a complaint, or tracking a case is no longer a privilege, but a right." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex flex-wrap items-center gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/auth", search: {
+          mode: "register"
+        }, className: "flex items-center", children: [
+          "Begin your journey ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", variant: "outline", className: "border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#citizens", children: "Explore the platform" }) })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("dl", { className: "mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200", children: [{
+        k: "22+",
+        v: "Indian languages"
+      }, {
+        k: "1 ecosystem",
+        v: "for 4 stakeholders"
+      }, {
+        k: "End-to-end",
+        v: "from rights to ruling"
+      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "transition-premium hover:scale-[1.05]", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "font-display text-3xl text-gold", children: s.k }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-xs uppercase tracking-[0.14em] text-parchment/60", children: s.v })
+      ] }, s.v)) })
+    ] }) })
+  ] });
+}
+function TrustStrip() {
+  const items = ["Citizen-first", "Verified Advocates", "Encrypted Evidence", "Multilingual", "Government-grade", "Open Justice"];
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-y border-border bg-secondary/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-6 py-5 text-xs uppercase tracking-[0.2em] text-muted-foreground", children: items.map((i, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-3", children: [
+    i,
+    idx < items.length - 1 && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gold", children: "◆" })
+  ] }, i)) }) });
+}
+function Problem() {
+  const points = ["Don't know which laws apply to their situation.", "Can't access affordable legal consultation.", "Don't understand court procedure or timelines.", "Have no visibility into the progress of their case."];
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "mx-auto max-w-7xl px-6 py-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid items-start gap-12 md:grid-cols-2", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: "The Problem" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-3 font-display text-4xl leading-tight md:text-5xl", children: [
+        "Millions face legal issues each year — most face them",
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "alone." })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-5", children: points.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-4 border-b border-border pb-5 last:border-0", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1.5 h-1.5 w-1.5 rounded-full bg-gold" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg text-ink-soft", children: p })
+    ] }, p)) })
+  ] }) });
+}
+function Stakeholders() {
+  const list = [{
+    icon: UserRound,
+    t: "Citizens",
+    d: "Understand rights, file complaints, find lawyers, track cases."
+  }, {
+    icon: Gavel,
+    t: "Lawyers",
+    d: "Discover clients, manage cases and conduct AI-assisted research."
+  }, {
+    icon: ShieldCheck,
+    t: "Police",
+    d: "Smart complaint routing, evidence handling and citizen comms."
+  }, {
+    icon: Building2,
+    t: "Government",
+    d: "Legal trend analytics, heatmaps and policy intelligence."
+  }];
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-secondary/50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-6 py-24", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: "Built for four stakeholders" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-3 font-display text-4xl md:text-5xl", children: "One ecosystem. Four powerful surfaces." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4", children: list.map(({
+      icon: Icon,
+      t,
+      d
+    }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "group relative overflow-hidden border-border bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-gold/30", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-6 grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold transition-premium group-hover:scale-110", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "h-5 w-5", strokeWidth: 1.8 }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-2xl", children: t }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-muted-foreground", children: d }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-0 left-0 h-0.5 w-0 bg-gold-gradient transition-all duration-500 group-hover:w-full" })
+    ] }, t)) })
+  ] }) });
+}
+function ModuleSection({
+  id,
+  eyebrow,
+  title,
+  lede,
+  items,
+  reverse
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id, className: "mx-auto max-w-7xl px-6 py-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `grid gap-12 lg:grid-cols-12 ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: eyebrow }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-3 font-display text-4xl leading-tight md:text-5xl", children: title }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-lg leading-relaxed text-muted-foreground", children: lede })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid gap-px overflow-hidden rounded-xl bg-border sm:grid-cols-2", children: items.map(({
+      icon: Icon,
+      t,
+      d
+    }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group bg-card p-7 transition-premium hover:bg-accent/50 hover:shadow-sm", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid h-9 w-9 place-items-center rounded-md bg-secondary text-emerald transition-premium group-hover:bg-emerald/10 group-hover:text-emerald", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "h-4.5 w-4.5 transition-transform duration-300 group-hover:scale-110", strokeWidth: 1.8 }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl transition-colors duration-300 group-hover:text-foreground", children: t })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm leading-relaxed text-muted-foreground", children: d })
+    ] }, t)) }) })
+  ] }) });
+}
+function CitizenModule() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(ModuleSection, { id: "citizens", eyebrow: "Citizen Module", title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    "For the ",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "people." })
+  ] }), lede: "From understanding your rights to filing a complaint and tracking it to closure — everything a citizen needs, in plain language.", items: [{
+    icon: Sparkles,
+    t: "AI Legal Assistant",
+    d: "Describe your problem in your own words. Get the laws, your rights and your next step."
+  }, {
+    icon: BookOpen,
+    t: "Rights Awareness Center",
+    d: "Consumer, women, cyber, labour, property, senior citizen and RTI — explained visually."
+  }, {
+    icon: FileText,
+    t: "Legal Complaint Builder",
+    d: "Guided questions generate police complaints, legal notices, RTIs and cybercrime reports."
+  }, {
+    icon: Archive,
+    t: "Evidence Vault",
+    d: "Encrypted, timestamped storage for photos, videos, audio and documents — organised by case."
+  }, {
+    icon: Activity,
+    t: "Case Tracking Dashboard",
+    d: "Complaint status, hearings, lawyer messages and submissions — all in one view."
+  }, {
+    icon: BadgeCheck,
+    t: "Legal Eligibility Checker",
+    d: "Discover free legal aid, victim compensation and government legal schemes you qualify for."
+  }] });
+}
+function LawyerModule() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "lawyers", className: "bg-secondary/50", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ModuleSection, { id: "lawyers-inner", eyebrow: "Lawyer Module", title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    "For the ",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "advocates." })
+  ] }), lede: "A modern practice surface — discover clients, run consultations, and let AI handle the heavy reading.", reverse: true, items: [{
+    icon: Search,
+    t: "Lawyer Discovery Platform",
+    d: "Citizens find you by specialization, location, language and experience."
+  }, {
+    icon: Briefcase,
+    t: "Lawyer Dashboard",
+    d: "Manage clients, schedule consultations, upload documents and chat securely."
+  }, {
+    icon: Brain,
+    t: "AI Case Research",
+    d: "Find similar judgments, summarise precedents and surface relevant references in seconds."
+  }, {
+    icon: ScrollText,
+    t: "Document Workspace",
+    d: "Draft, annotate and version notices, petitions and filings collaboratively."
+  }] }) });
+}
+function PoliceModule() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(ModuleSection, { id: "authorities", eyebrow: "Police & Enforcement", title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    "For the ",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "first responders." })
+  ] }), lede: "Smart classification, priority detection and a clean evidence pipeline — so attention reaches the cases that need it most.", items: [{
+    icon: Languages,
+    t: "Smart Complaint Classification",
+    d: "AI sorts complaints into cyber, property, fraud, labour, domestic and consumer."
+  }, {
+    icon: TriangleAlert,
+    t: "Priority Risk Detection",
+    d: "Threats to life, abuse, child safety and fraud emergencies are flagged for urgent action."
+  }, {
+    icon: Archive,
+    t: "Evidence Management",
+    d: "Access submitted evidence with audit logs, chain of custody and structured case files."
+  }, {
+    icon: MessagesSquare,
+    t: "Citizen Communication",
+    d: "Status updates, requests and follow-ups stay in a single, accountable thread."
+  }] });
+}
+function GovAnalytics() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-ink-gradient" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-6 py-28 text-parchment", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "border-gold/40 bg-gold/10 text-gold hover:bg-gold/10", children: "Government & Judiciary" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-display text-4xl leading-tight md:text-6xl", children: [
+          "Policy intelligence, drawn from the",
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-gold", children: "pulse of the nation." })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-lg text-parchment/75", children: "Anonymised, aggregated signals from across the ecosystem — turned into decisions that move justice forward." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-px overflow-hidden rounded-xl bg-parchment/10 md:grid-cols-3", children: [{
+        icon: ChartColumn,
+        t: "Legal Trend Intelligence",
+        d: "Most common disputes, crime trends and regional legal issues at a glance."
+      }, {
+        icon: Map,
+        t: "Geographic Heatmaps",
+        d: "Interactive maps of cyber fraud, consumer disputes and legal-aid demand zones."
+      }, {
+        icon: Lightbulb,
+        t: "Policy Recommendation Engine",
+        d: "AI surfaces emerging issues, bottlenecks and regions needing intervention."
+      }].map(({
+        icon: Icon,
+        t,
+        d
+      }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-[oklch(0.15_0.04_260)] p-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid h-10 w-10 place-items-center rounded-md bg-gold/15 text-gold", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "h-5 w-5", strokeWidth: 1.8 }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-5 font-display text-2xl", children: t }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-parchment/70", children: d })
+      ] }, t)) })
+    ] })
+  ] });
+}
+function AIFeatures() {
+  const list = [{
+    icon: ScrollText,
+    t: "Judgment Summarization",
+    d: "Long judgments converted to plain-language summaries, key points and implications."
+  }, {
+    icon: Search,
+    t: "Similar Case Finder",
+    d: "Match issues to precedents and related case histories instantly."
+  }, {
+    icon: Languages,
+    t: "Multilingual Assistant",
+    d: "English, Hindi and 20+ regional Indian languages for true accessibility."
+  }, {
+    icon: Brain,
+    t: "Predictive Legal Guidance",
+    d: "Typical process flow, timelines, required documents and likely outcomes per case type."
+  }];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "ai", className: "mx-auto max-w-7xl px-6 py-24", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: "AI at the core" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mx-auto mt-3 max-w-3xl font-display text-4xl md:text-5xl", children: [
+        "Intelligence trained on the language of ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "Indian law." })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4", children: list.map(({
+      icon: Icon,
+      t,
+      d
+    }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "border border-border/80 bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-gold/30 group", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "h-6 w-6 text-gold transition-transform duration-300 group-hover:scale-110", strokeWidth: 1.6 }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-5 font-display text-xl", children: t }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-muted-foreground", children: d })
+    ] }, t)) })
+  ] });
+}
+function Innovations() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "rights", className: "bg-secondary/50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-6 py-24", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: "Beyond the basics" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-3 max-w-2xl font-display text-4xl md:text-5xl", children: "Innovations that change the culture of justice." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12 grid gap-6 md:grid-cols-3", children: [{
+      icon: EyeOff,
+      t: "Anonymous Whistleblower Portal",
+      d: "Securely report corruption and misconduct while your identity stays protected."
+    }, {
+      icon: Gamepad2,
+      t: "Legal Awareness Gamification",
+      d: "Quizzes, scenarios and rewards that teach youth about their rights."
+    }, {
+      icon: MessagesSquare,
+      t: "Community Discussion Forum",
+      d: "A moderated space to share experiences and learn from legal experts."
+    }].map(({
+      icon: Icon,
+      t,
+      d
+    }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "border border-border/80 bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-emerald/20 group", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold transition-premium group-hover:scale-110", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon, { className: "h-5 w-5", strokeWidth: 1.8 }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-5 font-display text-2xl", children: t }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-muted-foreground", children: d })
+    ] }, t)) })
+  ] }) });
+}
+function Impact() {
+  const list = ["Increased legal awareness among citizens", "Easier and faster access to justice", "Quicker, structured complaint preparation", "Stronger lawyer–client connectivity", "Tamper-evident evidence management", "Data-driven governance and reform"];
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "mx-auto max-w-7xl px-6 py-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-12 md:grid-cols-2", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SectionEyebrow, { children: "Expected impact" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-3 font-display text-4xl leading-tight md:text-5xl", children: [
+        "From fragmented services to a",
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-emerald", children: "unified justice ecosystem." })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "grid gap-4 self-center", children: list.map((l) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-3 text-lg", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(BadgeCheck, { className: "mt-1 h-5 w-5 shrink-0 text-gold", strokeWidth: 1.8 }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-ink-soft", children: l })
+    ] }, l)) })
+  ] }) });
+}
+function CTA() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "px-6 pb-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative mx-auto max-w-6xl overflow-hidden rounded-2xl bg-ink-gradient p-12 text-parchment shadow-elegant md:p-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Scale, { className: "h-8 w-8 text-gold animate-pulse", strokeWidth: 1.6 }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-6 max-w-2xl font-display text-4xl leading-tight md:text-5xl", children: "Justice should never depend on who you know." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-xl text-parchment/75", children: "Join Nyaya Setu today — whether you're a citizen seeking clarity, an advocate building a practice, or an authority serving the public." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-wrap gap-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", search: {
+        mode: "register"
+      }, children: "Create your account" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", variant: "outline", className: "border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", search: {
+        mode: "login"
+      }, children: "I already have one" }) })
+    ] })
+  ] }) });
+}
+function SectionEyebrow({
+  children
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-px w-8 bg-gold" }),
+    children
+  ] });
+}
+export {
+  LandingPage as component
+};
