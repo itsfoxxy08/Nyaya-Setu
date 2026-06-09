@@ -68,11 +68,11 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_oklch(0.1_0.04_260/0.6)_70%)]" />
 
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
-        <div className="max-w-3xl">
-          <Badge className="border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur">
-            <Sparkles className="mr-1.5 h-3 w-3" /> A public-interest initiative
+        <div className="max-w-3xl animate-fade-in-up opacity-0">
+          <Badge className="border-gold/40 bg-gold/10 text-gold hover:bg-gold/10 backdrop-blur transition-premium hover:border-gold/60">
+            <Sparkles className="mr-1.5 h-3 w-3 animate-pulse" /> A public-interest initiative
           </Badge>
-          <h1 className="mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl">
+          <h1 className="mt-6 font-display text-5xl font-medium leading-[1.05] text-parchment md:text-7xl tracking-tight">
             Justice,{" "}
             <span className="italic text-gold">bridged.</span>
             <br />
@@ -86,23 +86,23 @@ function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Button asChild size="lg" className="bg-gold-gradient text-ink hover:opacity-95 shadow-seal">
-              <Link to="/auth" search={{ mode: "register" }}>
-                Begin your journey <ArrowRight className="ml-1 h-4 w-4" />
+            <Button asChild size="lg" className="bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+              <Link to="/auth" search={{ mode: "register" }} className="flex items-center">
+                Begin your journey <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment hover:bg-parchment/10 hover:text-parchment">
+            <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
               <a href="#citizens">Explore the platform</a>
             </Button>
           </div>
 
-          <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-parchment/15 pt-8">
+          <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-parchment/15 pt-8 animate-fade-in-up opacity-0 animation-delay-200">
             {[
               { k: "22+", v: "Indian languages" },
               { k: "1 ecosystem", v: "for 4 stakeholders" },
               { k: "End-to-end", v: "from rights to ruling" },
             ].map((s) => (
-              <div key={s.v}>
+              <div key={s.v} className="transition-premium hover:scale-[1.05]">
                 <dt className="font-display text-3xl text-gold">{s.k}</dt>
                 <dd className="mt-1 text-xs uppercase tracking-[0.14em] text-parchment/60">{s.v}</dd>
               </div>
@@ -183,8 +183,8 @@ function Stakeholders() {
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {list.map(({ icon: Icon, t, d }) => (
-            <Card key={t} className="group relative overflow-hidden border-border bg-card p-7 transition hover:shadow-elegant">
-              <div className="mb-6 grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold">
+            <Card key={t} className="group relative overflow-hidden border-border bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-gold/30">
+              <div className="mb-6 grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold transition-premium group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={1.8} />
               </div>
               <div className="font-display text-2xl">{t}</div>
@@ -219,12 +219,12 @@ function ModuleSection({
         <div className="lg:col-span-8">
           <div className="grid gap-px overflow-hidden rounded-xl bg-border sm:grid-cols-2">
             {items.map(({ icon: Icon, t, d }) => (
-              <div key={t} className="group bg-card p-7 transition hover:bg-accent/40">
+              <div key={t} className="group bg-card p-7 transition-premium hover:bg-accent/50 hover:shadow-sm">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-9 w-9 place-items-center rounded-md bg-secondary text-emerald">
-                    <Icon className="h-4.5 w-4.5" strokeWidth={1.8} />
+                  <div className="grid h-9 w-9 place-items-center rounded-md bg-secondary text-emerald transition-premium group-hover:bg-emerald/10 group-hover:text-emerald">
+                    <Icon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.8} />
                   </div>
-                  <h3 className="font-display text-xl">{t}</h3>
+                  <h3 className="font-display text-xl transition-colors duration-300 group-hover:text-foreground">{t}</h3>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</p>
               </div>
@@ -346,8 +346,8 @@ function AIFeatures() {
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {list.map(({ icon: Icon, t, d }) => (
-          <Card key={t} className="border-border bg-card p-7 transition hover:shadow-elegant">
-            <Icon className="h-6 w-6 text-gold" strokeWidth={1.6} />
+          <Card key={t} className="border border-border/80 bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-gold/30 group">
+            <Icon className="h-6 w-6 text-gold transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
             <h3 className="mt-5 font-display text-xl">{t}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
           </Card>
@@ -370,8 +370,8 @@ function Innovations() {
             { icon: Gamepad2, t: "Legal Awareness Gamification", d: "Quizzes, scenarios and rewards that teach youth about their rights." },
             { icon: MessagesSquare, t: "Community Discussion Forum", d: "A moderated space to share experiences and learn from legal experts." },
           ].map(({ icon: Icon, t, d }) => (
-            <Card key={t} className="border-border bg-card p-7">
-              <div className="grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold">
+            <Card key={t} className="border border-border/80 bg-card p-7 transition-premium hover:-translate-y-1 hover:shadow-elegant hover:border-emerald/20 group">
+              <div className="grid h-11 w-11 place-items-center rounded-md bg-ink-gradient text-gold transition-premium group-hover:scale-110">
                 <Icon className="h-5 w-5" strokeWidth={1.8} />
               </div>
               <h3 className="mt-5 font-display text-2xl">{t}</h3>
@@ -421,7 +421,7 @@ function CTA() {
     <section className="px-6 pb-24">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl bg-ink-gradient p-12 text-parchment shadow-elegant md:p-16">
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-        <Scale className="h-8 w-8 text-gold" strokeWidth={1.6} />
+        <Scale className="h-8 w-8 text-gold animate-pulse" strokeWidth={1.6} />
         <h2 className="mt-6 max-w-2xl font-display text-4xl leading-tight md:text-5xl">
           Justice should never depend on who you know.
         </h2>
@@ -430,10 +430,10 @@ function CTA() {
           advocate building a practice, or an authority serving the public.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild size="lg" className="bg-gold-gradient text-ink hover:opacity-95 shadow-seal">
+          <Button asChild size="lg" className="bg-gold-gradient text-ink shadow-seal transition-premium hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
             <Link to="/auth" search={{ mode: "register" }}>Create your account</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment hover:bg-parchment/10 hover:text-parchment">
+          <Button asChild size="lg" variant="outline" className="border-parchment/30 bg-transparent text-parchment transition-premium hover:bg-parchment/10 hover:text-parchment hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
             <Link to="/auth" search={{ mode: "login" }}>I already have one</Link>
           </Button>
         </div>
